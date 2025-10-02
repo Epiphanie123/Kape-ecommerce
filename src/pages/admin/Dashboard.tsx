@@ -1,6 +1,4 @@
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   Tooltip,
@@ -10,8 +8,6 @@ import {
   Cell,
   AreaChart,
   Area,
-  BarChart,
-  Bar,
 } from "recharts";
 import { useState } from "react";
 
@@ -31,24 +27,7 @@ const orderStatus = [
   { name: "Declined", value: 20 },
 ];
 
-const incomeData = [
-  { month: "Jan", income: 2400 },
-  { month: "Feb", income: 1398 },
-  { month: "Mar", income: 9800 },
-  { month: "Apr", income: 3908 },
-  { month: "May", income: 4800 },
-  { month: "Jun", income: 3800 },
-  { month: "Jul", income: 4300 },
-];
 
-const newUsersData = [
-  { week: "W1", users: 400 },
-  { week: "W2", users: 600 },
-  { week: "W3", users: 300 },
-  { week: "W4", users: 800 },
-  { week: "W5", users: 500 },
-  { week: "W6", users: 700 },
-];
 
 const GRAY_COLORS = ["#4B5563", "#6B7280", "#9CA3AF"]; // muted gray tones
 
@@ -207,10 +186,10 @@ function Dashboard() {
                 paddingAngle={5}
                 label={({ name, value }) => `${name}: ${value}`}
               >
-                {orderStatus.map((entry, index) => (
+                {orderStatus.map(( index) => (
                   <Cell
                     key={`cell-${index}`}
-                    fill={GRAY_COLORS[index % GRAY_COLORS.length]}
+                    fill={GRAY_COLORS[ GRAY_COLORS.length]}
                     stroke="#F59E0B"
                     strokeWidth={1}
                   />

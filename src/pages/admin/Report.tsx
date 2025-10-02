@@ -151,8 +151,8 @@ function Report() {
                 paddingAngle={5}
                 label={({ name, value }) => `${name}: ${value}`}
               >
-                {orderStatus.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                {orderStatus.map(( index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[COLORS.length]} />
                 ))}
               </Pie>
             </PieChart>

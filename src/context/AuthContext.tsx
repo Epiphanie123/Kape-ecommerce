@@ -7,7 +7,7 @@ export interface User {
   role: string;
 }
 
-interface AuthContextType {
+export interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<User>;
   logout: () => void;
